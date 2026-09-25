@@ -1,0 +1,65 @@
+[
+  {
+    "id": "hikvision-cve-2021-36260",
+    "vendor": "hikvision",
+    "cve": "CVE-2021-36260",
+    "title": "海康威视 Web 服务命令注入",
+    "severity": "critical",
+    "description": "部分海康威视设备的 Web 服务存在未授权命令注入漏洞，攻击者可在无需认证的情况下远程执行任意系统命令。",
+    "advice": "升级到官方修复固件；关闭设备的公网端口映射；仅在受信任网络内暴露管理端口。"
+  },
+  {
+    "id": "hikvision-cve-2017-7921",
+    "vendor": "hikvision",
+    "cve": "CVE-2017-7921",
+    "title": "海康威视认证绕过",
+    "severity": "high",
+    "description": "部分海康威视固件存在认证绕过，攻击者可越权获取设备配置、用户列表甚至快照。",
+    "advice": "升级固件；修改默认口令；禁用不必要的服务与公网访问。"
+  },
+  {
+    "id": "dahua-cve-2021-33044",
+    "vendor": "dahua",
+    "cve": "CVE-2021-33044",
+    "title": "大华身份认证绕过 (NetKeyboard)",
+    "severity": "critical",
+    "description": "部分大华设备在登录过程中存在认证绕过，构造特定报文即可绕过身份校验登录设备。",
+    "advice": "升级到官方修复固件；修改默认口令；限制管理端口暴露面。"
+  },
+  {
+    "id": "dahua-cve-2021-33045",
+    "vendor": "dahua",
+    "cve": "CVE-2021-33045",
+    "title": "大华身份认证绕过 (Loopback)",
+    "severity": "critical",
+    "description": "部分大华设备存在认证绕过漏洞，可在未授权情况下登录设备管理界面。",
+    "advice": "升级固件；启用强口令；关闭公网映射。"
+  },
+  {
+    "id": "dlink-cve-2020-25078",
+    "vendor": "dlink",
+    "cve": "CVE-2020-25078",
+    "title": "D-Link 摄像头管理员口令泄露",
+    "severity": "high",
+    "description": "部分 D-Link DCS 系列摄像头存在信息泄露，未授权即可读取管理员口令。",
+    "advice": "升级固件；更换设备或隔离网络；避免公网暴露。"
+  },
+  {
+    "id": "uniview-default-cred",
+    "vendor": "uniview",
+    "cve": "N/A",
+    "title": "宇视设备弱口令/默认口令风险",
+    "severity": "medium",
+    "description": "宇视等品牌设备若沿用默认或弱口令，易被未授权访问。",
+    "advice": "立即修改为强口令；启用账户锁定策略；关闭公网访问。"
+  },
+  {
+    "id": "generic-default-cred",
+    "vendor": "*",
+    "cve": "N/A",
+    "title": "通用默认/弱口令风险",
+    "severity": "medium",
+    "description": "网络摄像头常见风险为沿用出厂默认口令或弱口令，导致未授权访问视频流与配置。",
+    "advice": "为所有账户设置强口令；禁用或重命名默认账户；开启失败锁定；避免将设备直接暴露到公网。"
+  }
+]
