@@ -16,21 +16,23 @@
 前置：Node 22+、pnpm、Rust（stable）、[Tauri 2 系统依赖](https://v2.tauri.app/start/prerequisites/)。预览的 `mse` / `hls` 模式需本机安装 ffmpeg；`retina` 模式不需要。
 
 ```bash
+make install          # 安装前端依赖
+make run              # 启动桌面开发模式 (tauri dev)
+make debug            # 同 run，带 RUST_LOG=debug
+make check            # 前后端静态检查
+make build            # 打包桌面安装包
+```
+
+等价的 pnpm 命令：
+
+```bash
 pnpm install
 pnpm tauri dev
+pnpm build            # 仅构建前端
+pnpm tauri build      # 打包安装包
 ```
 
-仅构建前端：
-
-```bash
-pnpm build
-```
-
-打包安装包：
-
-```bash
-pnpm tauri build
-```
+`make help` 可查看全部目标。
 
 ## 文档
 
